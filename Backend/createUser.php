@@ -18,12 +18,19 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 //     echo "connection failed";
 // }
 
-$name = $_REQUEST['name'];
-$email = $_REQUEST['email'];
-$phone = $_REQUEST['phone'];
-$pass = $_REQUEST['pass'];
+// $name = $_REQUEST['name'];
+// $email = $_REQUEST['email'];
+// $phone = $_REQUEST['phone'];
+// $pass = $_REQUEST['pass'];
 
-$sql = "INSERT INTO users(name, email, phone, pass) VALUES('$name', '$email', '$phone', '$pass')";
+$fname = $_REQUEST['first_name'];
+$lname = $_REQUEST['last_name'];
+$email = $_REQUEST['email'];
+$pass = $_REQUEST['password'];
+$phone = $_REQUEST['phone'];
+
+
+$sql = "INSERT INTO users(first_name,last_name,email,password,phone) VALUES('$fname', '$lname', '$email', '$pass', '$phone')";
 
 mysqli_query($conn,$sql);
 
